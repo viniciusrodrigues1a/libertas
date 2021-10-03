@@ -16,6 +16,7 @@ import Habit from "../../components/Habit";
 import HeaderText from "../../components/HeaderText";
 import { HabitContext } from "../../context/habit";
 import { LanguageContext } from "../../context/language";
+import Onboarding from "../../components/Onboarding";
 
 const PatternsImg = require("../../assets/patterns.png");
 const PlusImg = require("../../assets/plus.png");
@@ -72,11 +73,17 @@ export default function Home() {
         )}
       />
 
-      <AddHabitButtonWrapper>
-        <AddHabitButton onPress={() => navigateTo("CreateHabit")}>
-          <Image source={PlusImg} />
-        </AddHabitButton>
-      </AddHabitButtonWrapper>
+      <Onboarding.ElevatedView
+        lessonMessage={language.getOnboardUserInHabitForLessonCreateHabitMessage()}
+      >
+        <AddHabitButtonWrapper>
+          <AddHabitButton onPress={() => navigateTo("CreateHabit")}>
+            <Image source={PlusImg} />
+          </AddHabitButton>
+        </AddHabitButtonWrapper>
+      </Onboarding.ElevatedView>
+
+      <Onboarding.ModalView />
     </Container>
   );
 }

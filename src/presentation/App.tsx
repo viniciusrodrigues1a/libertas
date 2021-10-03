@@ -12,6 +12,7 @@ import {
   Poppins_600SemiBold,
 } from "@expo-google-fonts/poppins";
 import { LanguageProvider } from "./context/language";
+import { OnboardingProvider } from "./context/onboarding";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -24,12 +25,13 @@ export default function App() {
   return (
     <>
       <StatusBar hidden />
-
-      <LanguageProvider>
-        <HabitProvider>
-          <Routes />
-        </HabitProvider>
-      </LanguageProvider>
+      <OnboardingProvider>
+        <LanguageProvider>
+          <HabitProvider>
+            <Routes />
+          </HabitProvider>
+        </LanguageProvider>
+      </OnboardingProvider>
 
       <Toast config={toastConfig} ref={(ref: any) => Toast.setRef(ref)} />
     </>

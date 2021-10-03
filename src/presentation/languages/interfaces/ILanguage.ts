@@ -8,6 +8,7 @@ import { IShowHabitControllerLanguage } from "./IShowHabitControllerLanguage";
 import { IToastLanguage } from "./IToastLanguage";
 import { IUpdateHabitControllerLanguage } from "./IUpdateHabitControllerLanguage";
 import { IUpdateHabitPageLanguage } from "./IUpdateHabitPageLanguage";
+import { IOnboardUserInHabitForLessonCreateHabit } from "./IOnboardUserInHabitForLessonCreateHabit";
 
 export interface ILanguage
   extends IToastLanguage,
@@ -19,4 +20,5 @@ export interface ILanguage
     IHomePageLanguage,
     IHabitPageLanguage,
     ICreateHabitPageLanguage,
-    IUpdateHabitPageLanguage {}
+    IUpdateHabitPageLanguage,
+    IOnboardUserInHabitForLessonCreateHabit {}

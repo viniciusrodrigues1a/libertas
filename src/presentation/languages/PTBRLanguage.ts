@@ -4,6 +4,9 @@ export class PTBRLanguage implements ILanguage {
   getFutureDateErrorMessage(date: Date): string {
     return "Data não pode estar no futuro";
   }
+  getOnboardUserInHabitForLessonCreateHabitMessage(): string {
+    return "Clique neste botão para criar um hábito";
+  }
 
   getDropdownInputTitlePropMessage(): string {
     return "Selecione um vício";

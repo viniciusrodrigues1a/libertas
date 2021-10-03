@@ -9,6 +9,10 @@ export class ENUSLanguage implements ILanguage {
     return "Select a bad habit";
   }
 
+  getOnboardUserInHabitForLessonCreateHabitMessage(): string {
+    return "Click in box for create habit";
+  }
+
   getDropdownInputMessage(): string {
     return "Which bad habit do you want to quit";
   }
